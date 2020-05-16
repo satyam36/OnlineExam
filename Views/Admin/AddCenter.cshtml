@@ -1,0 +1,60 @@
+﻿@model EximinationCenter
+@{
+    ViewData["Title"] = "AddCenter";
+}
+
+<h1>AddCenter</h1>
+<div>
+    <form>
+        <div class="row">
+            <div class="form-group col-md-6">
+                <label asp-for="Name">Center Name:</label>
+                <input asp-for="Name" class="form-control">
+            </div>
+            <div class="form-group col-md-6">
+                <label asp-for="Code">Center Code:</label>
+                <input asp-for="Code" class="form-control">
+            </div>
+        </div>
+       
+        <div class="form-group">
+            <label asp-for="Address">Center Address :</label>
+            <textarea asp-for="Address" rows="5" class="form-control"></textarea>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label asp-for="State">State:</label>
+                    <input asp-for="State" class="form-control">
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Pincode">Pincode :</label>
+                    <input asp-for="Pincode" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label asp-for="CenterInchargeEmail">Center Incharge Email :</label>
+                    <input asp-for="CenterInchargeEmail" class="form-control">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label asp-for="City">City :</label>
+                    <input asp-for="City" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label asp-for="CenterInchargeName">Center Incharge Name:</label>
+                    <input asp-for="CenterInchargeName" class="form-control">
+                </div>
+
+                <div class="form-group">
+                    <label asp-for=" SeatAvailable"> Seat Available:</label>
+                    <input asp-for="SeatAvailable" class="form-control">
+                </div>
+            </div>
+        </div>
+       
+        <button type="submit" class="btn btn-success">Add Center</button>
+    </form>
+</div>

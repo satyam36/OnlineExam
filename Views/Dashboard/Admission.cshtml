@@ -1,0 +1,85 @@
+﻿@model Enrollment
+@{
+    ViewData["Title"] = "Admission";
+}
+
+
+<div>
+    <form id="regForm" action="/action_page.php">
+        <h1>Register:</h1>
+        <!-- One "tab" for each step in the form: -->
+
+        <div class="tab">
+            Personal Details :
+            <p><input placeholder="First name..." oninput="this.className = ''" asp-for="FirstName"></p>
+            <p><input placeholder="Last name..." oninput="this.className = ''" asp-for="LastName"></p>
+            <p><input placeholder="Date of Birth..." oninput="this.className = ''" asp-for="DOB" type="date"></p>
+            <p><input placeholder="Contact Number..." oninput="this.className = ''" asp-for="ContactNumber"></p>
+            <p><input placeholder="Email..." oninput="this.className = ''" asp-for="Email"></p>
+            <p><input placeholder="Father's name..." oninput="this.className = ''" asp-for="Father"></p>
+            <p><input placeholder="Father's Contact Number..." oninput="this.className = ''" asp-for="Mobile"></p>
+        </div>
+        <div class="tab">
+            Parmanent Address :
+            <p><input placeholder="Address..." oninput="this.className = ''" asp-for="ParmanentAddress.Address_"></p>
+            <p><input placeholder="State..." oninput="this.className = ''" asp-for="ParmanentAddress.State"></p>
+            <p><input placeholder="City..." oninput="this.className = ''" asp-for="ParmanentAddress.City"></p>
+            <p><input placeholder="Pincode..." oninput="this.className = ''" asp-for="ParmanentAddress.Pincode"></p>
+
+            Correspondance Address :
+            <p><input class="address" asp-for="SameAsParmanent">Same As Parmanent Address</p>
+            <p><input placeholder="Address..." oninput="this.className = ''" asp-for="CorrespondanceAddress.Address_"></p>
+            <p><input placeholder="State..." oninput="this.className = ''" asp-for="CorrespondanceAddress.State"></p>
+            <p><input placeholder="City..." oninput="this.className = ''" asp-for="CorrespondanceAddress.City"></p>
+            <p><input placeholder="Pincode..." oninput="this.className = ''" asp-for="CorrespondanceAddress.Pincode"></p>
+
+        </div>
+
+        @*public Programm Program { get; set; }
+        public RequiredSubject RequiredSubject { get; set; }
+        public OptionalSubject OptionalSubject { get; set; }*@
+        <div class="tab">
+            Programm:
+            <select>
+                <option>BCA</option>
+            </select>
+            <select>
+                <option>s1</option>
+            </select>
+            <select>
+                <option>s2</option>
+            </select>
+            <select>
+                <option>s2</option>
+            </select>
+            <select>
+                <option>s2</option>
+            </select>
+            <select>
+                <option>s2</option>
+            </select>
+            <select>
+                <option>s2</option>
+            </select>
+        </div>
+        <div class="tab">
+            Documents Upload :
+            <p><input placeholder="Profile" oninput="this.className = ''" type="file" asp-for="Profile"></p>
+            <p><input placeholder="Matric" oninput="this.className = ''" type="file" asp-for="Matric"></p>
+            <p><input placeholder="Secondary" oninput="this.className = ''" type="file" asp-for="Secondary"></p>
+        </div>
+        <div style="overflow:auto;">
+            <div style="float:right;">
+                <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+                <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+            </div>
+        </div>
+        <!-- Circles which indicates the steps of the form: -->
+        <div style="text-align:center;margin-top:40px;">
+            <span class="step"></span>
+            <span class="step"></span>
+            <span class="step"></span>
+            <span class="step"></span>
+        </div>
+    </form>
+</div>
