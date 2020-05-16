@@ -24,6 +24,11 @@ namespace Exmination.Controllers
         {
             return View();
         }
+        
+        public IActionResult EnrollApprove()
+        {
+            return View();
+        }
         [HttpGet]
         public IActionResult AddCenter()
         {
