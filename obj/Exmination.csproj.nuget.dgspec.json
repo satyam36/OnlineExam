@@ -42,13 +42,25 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
-            "Kendo.Mvc": {
+            "DinkToPdf": {
               "target": "Package",
-              "version": "[2016.2.504, )"
+              "version": "[1.0.8, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.1.4, )"
             },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[3.1.2, )"
+            },
+            "Rotativa.AspNetCore": {
+              "target": "Package",
+              "version": "[1.2.0-beta, )"
             }
           },
           "imports": [

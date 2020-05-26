@@ -1,0 +1,26 @@
+﻿@model AdmitCard
+@{
+    ViewData["Title"] = "Admit_Card";
+}
+
+<h1>Admit_Card</h1>
+<div>
+    <form id="regForm" method="post">
+        <div asp-validation-summary="All"></div>
+        <div>
+            <label asp-for=" RollNumber">Enter Your Roll. Number</label>
+            <input asp-for=" RollNumber" class="form-control" />
+        </div>
+        <br />
+        <div>
+            <label asp-for="DOB">Date of Birth</label>
+            <input asp-for="DOB" class="form-control" type="date"/>
+        </div>
+        <br>
+        <div>
+            <input type="submit" class="form-control btn btn-success" value="Get Admit Card" />
+        </div>
+    </form>
+
+</div>
+

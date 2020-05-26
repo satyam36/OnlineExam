@@ -33,8 +33,15 @@ using Exmination.Models.Student;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 4 "C:\Users\ksanjiv\Desktop\MiniProj\Exmination\Exmination\Views\_ViewImports.cshtml"
+using Exmination.Models.Account;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"eb6f740a59239147ef30294c0d68bb4a0ec77ff8", @"/Views/Admin/EnrollApprove.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"103968db727d0bd3c08098acb7dcc6416a96a11a", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"dba4422939be3c91ee1cef31816555e32d88ad69", @"/Views/_ViewImports.cshtml")]
     public class Views_Admin_EnrollApprove : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         #pragma warning disable 1998
