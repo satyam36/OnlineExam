@@ -108,8 +108,9 @@ input[type=radio], .radio-inline input[type=radio] {
     margin-bottom: 11px;
 }
 
-.catcha_btn{
-
+.catcha_btn {
+    width: 60px;
+    float: left;
 }
 .captcha {
     font-size: 31px;
