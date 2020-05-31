@@ -7,6 +7,7 @@ namespace Exmination.Models
 {
     public class Address
     {
+        public int Id { get; set; }
         public string Address_ { get; set; }
         public string State { get; set; }
         public string City { get; set; }

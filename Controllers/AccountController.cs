@@ -39,7 +39,7 @@ namespace Exmination.Controllers
         }
         
         [HttpPost]
-        public IActionResult Registration(Registration model)
+        public IActionResult Registration(RegistrationViewModel model)
         {
             return View();
         }

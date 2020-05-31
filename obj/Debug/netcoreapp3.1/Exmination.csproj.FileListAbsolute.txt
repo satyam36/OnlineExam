@@ -158,3 +158,4 @@ C:\Users\ksanjiv\Desktop\MiniProj\Exmination\Exmination\bin\Debug\netcoreapp3.1\
 C:\Users\ksanjiv\Desktop\MiniProj\Exmination\Exmination\obj\Debug\netcoreapp3.1\Exmination.csproj.CoreCompileInputs.cache
 C:\Users\ksanjiv\Desktop\MiniProj\Exmination\Exmination\obj\Debug\netcoreapp3.1\Exmination.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\ksanjiv\Desktop\MiniProj\Exmination\Exmination\obj\Debug\netcoreapp3.1\Exmination.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\ksanjiv\Desktop\MiniProj\Exmination\Exmination\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll

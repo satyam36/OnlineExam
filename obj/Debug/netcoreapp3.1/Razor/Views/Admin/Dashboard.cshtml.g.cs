@@ -40,8 +40,15 @@ using Exmination.Models.Account;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 5 "C:\Users\ksanjiv\Desktop\MiniProj\Exmination\Exmination\Views\_ViewImports.cshtml"
+using Exmination.ModelView.Student;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"a591141817c85c511635dd8d93c5aa16ea7d63fe", @"/Views/Admin/Dashboard.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"dba4422939be3c91ee1cef31816555e32d88ad69", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"84e5acd2bcddff3ea85f46e3fd9a3f98d3ce9c95", @"/Views/_ViewImports.cshtml")]
     public class Views_Admin_Dashboard : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("class", new global::Microsoft.AspNetCore.Html.HtmlString("btn btn-primary form-control"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -84,7 +91,7 @@ using Exmination.Models.Account;
 #line hidden
 #nullable disable
             WriteLiteral("\r\n<h1>Dashboard</h1>\r\n<div>\r\n    ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a591141817c85c511635dd8d93c5aa16ea7d63fe5693", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a591141817c85c511635dd8d93c5aa16ea7d63fe5892", async() => {
                 WriteLiteral("Add Center");
             }
             );
@@ -122,7 +129,7 @@ using Exmination.Models.Account;
                 <td>Doe</td>
                 <td>john@example.com</td>
                 <td>");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a591141817c85c511635dd8d93c5aa16ea7d63fe7854", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a591141817c85c511635dd8d93c5aa16ea7d63fe8053", async() => {
                 WriteLiteral("View");
             }
             );
@@ -143,7 +150,7 @@ using Exmination.Models.Account;
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("</td>\r\n            </tr>\r\n            <tr>\r\n                <td>Mary</td>\r\n                <td>Moe</td>\r\n                <td>mary@example.com</td>\r\n                <td>");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a591141817c85c511635dd8d93c5aa16ea7d63fe9672", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a591141817c85c511635dd8d93c5aa16ea7d63fe9871", async() => {
                 WriteLiteral("View");
             }
             );
@@ -164,7 +171,7 @@ using Exmination.Models.Account;
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("</td>\r\n            </tr>\r\n            <tr>\r\n                <td>July</td>\r\n                <td>Dooley</td>\r\n                <td>july@example.com</td>\r\n                <td>");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a591141817c85c511635dd8d93c5aa16ea7d63fe11493", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a591141817c85c511635dd8d93c5aa16ea7d63fe11692", async() => {
                 WriteLiteral("View");
             }
             );

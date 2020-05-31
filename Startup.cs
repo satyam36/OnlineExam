@@ -4,9 +4,11 @@ using System.Linq;
 using System.Threading.Tasks;
 using DinkToPdf;
 using DinkToPdf.Contracts;
+using Exmination.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -34,7 +36,7 @@ namespace Exmination
         public void ConfigureServices(IServiceCollection services)
         {
             //services.AddSingleton(typeof(IConverter), new SynchronizedConverter(new PdfTools()));
-            //services.AddDbContextPool<DbDataAccess>(entity => entity.UseSqlServer(_configuration.GetConnectionString("EmployeeDbConnection")));
+            services.AddDbContextPool<ExaminationDBAccess>(entity => entity.UseSqlServer(_configuration.GetConnectionString("ExamDbConnection")));
 
             //services.AddControllers();
             services.AddControllersWithViews();

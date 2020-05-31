@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Exmination.Data;
 using Exmination.Models.Student;
+using Exmination.ModelView.Student;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Rotativa.AspNetCore;
@@ -26,14 +27,14 @@ namespace Exmination.Controllers
         public IActionResult Enroll()
         {
             CenterData centerData = new CenterData();
-            Enrollment enrollment = new Enrollment();
+            EnrollmentViewModel enrollment = new EnrollmentViewModel();
             enrollment.ExameCenterCh1 = centerData.Center();
             enrollment.ExameCenterCh2 = centerData.Center();
             enrollment.ExameCenterCh3 = centerData.Center();
             return View(enrollment);
         }
         [HttpPost]
-        public IActionResult Enroll(Enrollment model)
+        public IActionResult Enroll(EnrollmentViewModel model)
         {
             if (ModelState.IsValid)
             {
@@ -42,7 +43,7 @@ namespace Exmination.Controllers
             else
             {
                 CenterData centerData = new CenterData();
-                Enrollment enrollment = new Enrollment();
+                EnrollmentViewModel enrollment = new EnrollmentViewModel();
                 enrollment.ExameCenterCh1 = centerData.Center();
                 enrollment.ExameCenterCh2 = centerData.Center();
                 enrollment.ExameCenterCh3 = centerData.Center();

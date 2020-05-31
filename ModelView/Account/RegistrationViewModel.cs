@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace Exmination.Models.Account
 {
-    public class Registration
+    public class RegistrationViewModel
     {
+       
         [Required]
         public string ExaminationApplied { get; set; }
         [Required]
