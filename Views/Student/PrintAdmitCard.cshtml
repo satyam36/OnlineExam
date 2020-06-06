@@ -1,0 +1,52 @@
+﻿@*@model Print_Admit_Card
+@{
+    ViewData["Title"] = "Print_Admit_Card";
+    Address address = Model.Address;
+}
+
+<h1>e-Admission Certificate<br />Online Examination Portal </h1>
+<table border="1" >
+    <tr>
+        <td><h2><b>Roll number :</b> @(Model.Roll) <b></h2></td>
+        <td colspan="2"><h2><b>Password For Examination :- </b>@(Model.PasswordForExamination)</h2></td>
+
+    </tr>
+    <tr>
+        <td><h3><b>Exam date :- </b>@(Model.ExamDate)</h3></td>
+        <td><h3><b>Reporting Time :- </b>@(Model.reportingTIme)</h3></td>
+        <td><h3><b>Entry Closing Time :- </b>@(Model.EntryClosingTime)</h3></td>
+    </tr><br /><br />
+    <tr>
+        <td><h3><b>Applicant Name :- </b>@(Model.ApplicantName)</h3></td>
+        <td><h3 ><b>Sex :- </b>@(Model.sex)</h3></td>
+        <td rowspan="3">Photo and Signature</td>
+    </tr>
+    <tr>
+        <td><h3 ><b>Date of Birth :- </b>@(Model.DOB)</h3></td>
+        <td><h3><b>Category :- </b>@(Model.category)</h3></td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <h3><b>Address :- </b>@(Model.Address.Address_)<br />
+            @(Model.Address.City),@(Model.Address.City)<br />
+            @(Model.Address.State),@(Model.Address.Pincode)</h3>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="3">
+            <h3><b>Examination Venue :- </b>@(Model.ExaminationVenue)</h3>
+        </td>
+    </tr><br />
+    <tr>
+        
+            <td><center><h3><b>Paper I</b></h3></center></td>
+            <td><center><h3><b>Marks</b></h3></center></td>
+            <td><Center><h3><b>Duration of Exam :-</b></h3></Center></td>
+        
+    </tr>
+    <tr>
+        <td><h3>General Inteligence and Reasoning<br />General Awareness<br />Quantitative Aptitude<br />English Comprehension</h3></td>
+        <td><center><h3>50<br />50<br />50<br />50</h3></center></td>
+        <td><br /><center><h3>10.00 A.M to 11.15 A.M</h3></center></td>
+    </tr>
+</table>*@

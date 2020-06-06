@@ -4,14 +4,16 @@ using Exmination.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Exmination.Migrations
 {
     [DbContext(typeof(ExaminationDBAccess))]
-    partial class ExaminationDBAccessModelSnapshot : ModelSnapshot
+    [Migration("20200531140131_updateReg")]
+    partial class updateReg
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

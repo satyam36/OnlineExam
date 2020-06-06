@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+using Exmination.Data.RegisterRepositry;
 using Exmination.Models;
 using Exmination.Models.Account;
 using Exmination.Models.Student;
@@ -14,9 +15,12 @@ namespace Exmination.Controllers
     public class AccountController : Controller
     {
         private readonly IHostingEnvironment hostingEnvironment;
-        public AccountController(IHostingEnvironment hostingEnvironment)
+        private readonly IRegisterRepositry _repositry;
+
+        public AccountController(IHostingEnvironment hostingEnvironment, IRegisterRepositry repositry)
         {
             this.hostingEnvironment = hostingEnvironment;
+            _repositry = repositry;
         }
 
         [HttpGet]
@@ -41,7 +45,27 @@ namespace Exmination.Controllers
         [HttpPost]
         public IActionResult Registration(RegistrationViewModel model)
         {
+            if(ModelState.IsValid)
+            {
+                string password = model.CandidateName.Substring(0, 4).ToUpper() + model.Mobile.Substring(0, 4);
+                Console.WriteLine(password);
+                Registation registation = new Registation()
+                {
+                    CandidateName = model.CandidateName,
+                    Email = model.Email,
+                    Mobile = model.Mobile,
+                    ExaminationApplied = model.ExaminationApplied,
+                    Password = password
+                };
+
+                _repositry.Add(registation);
+            }
             return View();
+        }
+
+        public IEnumerable<Registation> GetRegistration()
+        {
+            return _repositry.GetRegistation();
         }
         //[HttpPost]
         //public IActionResult Registration(Photo model)

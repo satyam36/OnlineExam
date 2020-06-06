@@ -1,10 +1,24 @@
-﻿
+﻿@model IEnumerable<Registation>
 @{
     ViewData["Title"] = "Dashboard";
 }
 
 <h1>Dashboard</h1>
 <div>
+    <ul>
+    @{ 
+        foreach(Registation reg in Model)
+        {
+           <li> @reg.Email</li>
+        }
+    }
+        </ul>
+    @*<div>
+        @Model.CandidateName
+    </div>
+    <div>
+        @Model.Email
+    </div>*@
     <a class="btn btn-primary form-control" asp-area="" asp-controller="Admin" asp-action="AddCenter">Add Center</a>
     <button type="button" class="btn btn-success form-control">Genrate Admit Card</button>
 

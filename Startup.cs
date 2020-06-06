@@ -5,6 +5,8 @@ using System.Threading.Tasks;
 using DinkToPdf;
 using DinkToPdf.Contracts;
 using Exmination.Data;
+using Exmination.Data.EnrollRepositry;
+using Exmination.Data.RegisterRepositry;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -37,7 +39,9 @@ namespace Exmination
         {
             //services.AddSingleton(typeof(IConverter), new SynchronizedConverter(new PdfTools()));
             services.AddDbContextPool<ExaminationDBAccess>(entity => entity.UseSqlServer(_configuration.GetConnectionString("ExamDbConnection")));
-
+            services.AddScoped<IRegisterRepositry, RegisterRepositry>();
+            services.AddScoped<IEnrollRepositry,EnrollRepositry >();
+            services.AddScoped<IRegisterRepositry, RegisterRepositry>();
             //services.AddControllers();
             services.AddControllersWithViews();
         }

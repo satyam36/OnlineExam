@@ -11,11 +11,12 @@ namespace Exmination.Models.Account
         public int id { get; set; }
         [Required]
         public string ExaminationApplied { get; set; }
-        [Required]
+        [Required][MinLength(5)]
         public string CandidateName { get; set; }
         [Required]
         public string Mobile { get; set; }
-       
+        [Required]
+        public string Password { get; set; }
         [Required]
         public string Email { get; set; }
     
