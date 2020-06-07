@@ -2,51 +2,59 @@
 @{
     ViewData["Title"] = "Registration";
 }
-
-<h1>Registration</h1>
-<div>
-    <form id="regForm" method="post">
-        <div class="form-group">
-            <label asp-for="ExaminationApplied">Examination Applied : </label>
-            <input asp-for="ExaminationApplied" class="form-control" placeholder="Enter email">
-        </div>
-        <div class="form-group">
-            <label asp-for=" CandidateName">Candidate Name :</label>
-            <input asp-for=" CandidateName" class="form-control" placeholder="Enter your name">
-        </div>
-        <div class="form-group">
-            <label asp-for="Mobile">Mobile No.:</label>
-            <input asp-for="Mobile" class="form-control" placeholder="Enter your mobile number">
-        </div>
-        <div class="form-group">
-            <label asp-for="ConfirmMoblile">Confirm Mobile no.:</label>
-            <input asp-for="ConfirmMoblile" class="form-control" placeholder="Re-enter your mobile no. " >
-        </div>
-        <div class="form-group">
-            <label asp-for="Email">Email:</label>
-            <input  asp-for="Email" class="form-control" placeholder="Enter email address" >
-        </div>
-        <div class="form-group">
-            <label asp-for="ConfirmEmail">Confirm Email:</label>
-            <input asp-for="ConfirmEmail" class="form-control" placeholder="Re-enter your email" >
-        </div>
-        <div class="form-group form-check">
-            <label class="form-check-label">
-                <input class="form-check-input" type="checkbox"> Remember me
-            </label>
-        </div>
-        <div class="captcha">
-            <div id="catcha">
-
+@section Scripts{
+    <script src="~/js/site.js"></script>
+}
+    <h1>Registration</h1>
+    <div>
+        <div asp-validation-summary="All"></div>
+        <form id="regForm" method="post" onsubmit="return validation(event)">
+            <div class="form-group">
+                <label asp-for="ExaminationApplied">Examination Applied : </label>
+                <input type="text" asp-for="ExaminationApplied" class="form-control" placeholder="Examination Applied For ... ">
             </div>
-            <div class="catcha_btn" onclick="captchaReload()">
-                <img src="~/images/refresh.png" class="refrech_btn" alt="refresh" />    
+            <div class="form-group">
+                <label asp-for=" CandidateName">Candidate Name :</label>
+                <input asp-for=" CandidateName" class="form-control" placeholder="Enter your name">
             </div>
-        </div>
-        <div  class="form-group">
-            <button type="submit" class="btn btn-primary form-control ">Submit</button>
-        </div>
-        
-    </form>  
-</div>
+            <div class="form-group">
+                <label asp-for="Mobile">Mobile No.:</label>
+                <input asp-for="Mobile" class="form-control" placeholder="Enter your mobile number">
+            </div>
+            <div class="form-group">
+                <label asp-for="ConfirmMoblile">Confirm Mobile no.:</label>
+                <input asp-for="ConfirmMoblile" class="form-control" placeholder="Re-enter your mobile no. ">
+            </div>
+            <div class="form-group">
+                <label asp-for="Email">Email:</label>
+                <input asp-for="Email" class="form-control" placeholder="Enter email address">
+            </div>
+            <div class="form-group">
+                <label asp-for="ConfirmEmail">Confirm Email:</label>
+                <input asp-for="ConfirmEmail" class="form-control" placeholder="Re-enter your email">
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" type="checkbox"> Remember me
+                </label>
+            </div>
+
+
+            <div class="captcha">
+                <div class="captcha_input">
+                    <input type="text" id="captcha_input" />
+                </div>
+                <div>
+                    <input type="text" name="AutoCaptcha" id="catcha" disabled />
+                </div>
+                <div class="catcha_btn" onclick="captchaReload()">
+                    <img src="~/images/refresh.png" class="refrech_btn" alt="refresh" />
+                </div>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary form-control ">Submit</button>
+            </div>
+
+        </form>
+    </div>
 

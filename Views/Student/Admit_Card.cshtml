@@ -2,10 +2,14 @@
 @{
     ViewData["Title"] = "Admit_Card";
 }
+@section Scripts{
+
+    <script src="~/js/admit_card.js"></script>
+}
 
 <h1>Admit_Card</h1>
 <div>
-    <form id="regForm" method="post">
+    <form id="regForm" method="post" onsubmit="return validation(event)">
         <div asp-validation-summary="All"></div>
         <div>
             <label asp-for=" RollNumber">Enter Your Roll. Number</label>
@@ -14,7 +18,7 @@
         <br />
         <div>
             <label asp-for="DOB">Date of Birth</label>
-            <input asp-for="DOB" class="form-control" type="date"/>
+            <input asp-for="DOB" class="form-control" type="date" />
         </div>
         <br>
         <div>

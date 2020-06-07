@@ -88,15 +88,18 @@ function Catcha() {
 
     var captchaLatter = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];    //fourth random number
 
-    document.getElementById("catcha").innerHTML = captchaLatter[index1] + "" + index5 + "" + captchaLatter[index2] + "" + index6 + "" + captchaLatter[index3] + "" + captchaLatter[index4];
+    document.getElementById("catcha").value = captchaLatter[index1] + "" + index5 + "" + captchaLatter[index2] + "" + index6 + "" + captchaLatter[index3] + "" + captchaLatter[index4];
 
 
 }
-function captchMatch() {
-
-    if (document.getElementById("catcha").innerHTML != document.getElementById("capid").value) {
+function validation(ev) {
+    //alert(document.getElementById("catcha").value);
+    //alert(document.getElementById("captcha_input").value);
+    if (document.getElementById("catcha").value !== document.getElementById("captcha_input").value) {
         alert("invalid captcha");
-
+        ev.preventDefault()
+    } else {
+        //alert('valid');
     }
 }
 function captchaReload() {
@@ -105,3 +108,4 @@ function captchaReload() {
 
 }
 Catcha();
+

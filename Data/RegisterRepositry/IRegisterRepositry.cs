@@ -9,8 +9,8 @@ namespace Exmination.Data.RegisterRepositry
     public interface IRegisterRepositry
     {
         public void Add(Registation registation);
-        public void Remove(int id);
-        public Registation GetRegistationById();
+        public bool Remove(string email);
+        public Registation GetRegistationById(string email);
         public IEnumerable<Registation> GetRegistation();
     }
 }

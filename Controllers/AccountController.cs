@@ -45,6 +45,7 @@ namespace Exmination.Controllers
         [HttpPost]
         public IActionResult Registration(RegistrationViewModel model)
         {
+
             if(ModelState.IsValid)
             {
                 string password = model.CandidateName.Substring(0, 4).ToUpper() + model.Mobile.Substring(0, 4);

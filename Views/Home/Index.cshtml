@@ -1,7 +1,23 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
-
+@section Scripts{
+    <script src="~/js/home_popup.js"></script>
+}
 <div class="text-center">
-    
+   
+
+    <div id="myModal" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title">Instructions </h4>
+                </div>
+                <div class="modal-body">
+                   <h1>welcome</h1>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

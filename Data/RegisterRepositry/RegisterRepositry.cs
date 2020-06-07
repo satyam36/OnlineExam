@@ -42,14 +42,25 @@ namespace Exmination.Data.RegisterRepositry
                                 .ToList();
         }
 
-        public Registation GetRegistationById()
+        public Registation GetRegistationById(string email)
         {
-            throw new NotImplementedException();
+            return repo.Registations
+                                    .FirstOrDefault(r => r.Email == email);
         }
 
-        public void Remove(int id)
+        public bool Remove(string email)
         {
-            throw new NotImplementedException();
+           repo.Registations
+                            .Remove(repo.Registations.FirstOrDefault(r => r.Email == email));
+            try
+            {
+                repo.SaveChanges();
+                return true;
+            }
+            catch (Exception e)
+            {
+                return false;
+            }
         }
     }
 }

@@ -65,18 +65,19 @@ namespace Exmination.Controllers
 
         public IActionResult Admit_Card()
         {
-            //return View();
-            return new ViewAsPdf();
+            return View();
+            //return new ViewAsPdf();
         }
         [HttpPost]
         public IActionResult Admit_Card(AdmitCard model)
         {
-            return View();
+            return RedirectToAction("PrintAdmitCard", "Student");
         }
 
-        public IActionResult AdimtCardGen()
+        public IActionResult PrintAdmitCard()
         {
-          return new   ViewAsPdf();
+            return new   ViewAsPdf();
+            //return View();
         }
 
     }

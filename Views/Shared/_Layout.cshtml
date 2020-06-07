@@ -7,10 +7,11 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    
     <link rel="stylesheet" href="~/css/site.css" />
 </head>
 <body>
-    <header>
+    <header id="navbar">
         <nav class="navbar navbar-inverse">
             <div class="container-fluid">
                 <div class="navbar-header">
@@ -24,8 +25,7 @@
                         </a>
                         <ul class="dropdown-menu">
                             <li><a asp-controller="Student" asp-action="Admit_Card">Admit card</a></li>
-                            <li><a href="#">Page 1-2</a></li>
-                            <li><a href="#">Page 1-3</a></li>
+                           
                         </ul>
                     </li>
                     <li><a asp-area="" asp-controller="Home" asp-action="About">About</a></li>
@@ -52,7 +52,8 @@
             &copy; 2020 - Exmination - <a asp-area="" asp-controller="Home" asp-action="Contact">Contact Us</a>
         </div>
     </footer>
-    <script src="~/js/site.js" asp-append-version="true"></script>
+    @*<script src="~/js/site.js" asp-append-version="true"></script>*@
     @RenderSection("Scripts", required: false)
+
 </body>
 </html>
