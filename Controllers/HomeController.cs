@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Exmination.Models;
+using Microsoft.AspNetCore.Http;
 
 namespace Exmination.Controllers
 {
@@ -20,6 +21,9 @@ namespace Exmination.Controllers
 
         public IActionResult Index()
         {
+            ViewBag.Name = HttpContext.Session.GetString("SessionName");
+            ViewBag.Age = HttpContext.Session.GetInt32("SessionAge");
+            ViewData["Message"] = "Asp.Net Core !!!.";
             return View();
         }
 

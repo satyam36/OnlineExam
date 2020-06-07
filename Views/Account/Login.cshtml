@@ -6,15 +6,17 @@
 <h1>Login</h1>
 <div>
     <form id="regForm" method="post">
-        <div asp-validation-summary="All"></div>
+       
         <div>
             <label asp-for="Username"></label>
             <input asp-for="Username" class="form-control" />
+            <span asp-validation-for="Username"></span>
         </div>
         <br />
         <div>
             <label asp-for="Password"></label>
-            <input asp-for="Password" class="form-control" />
+            <input type="password" asp-for="Password" class="form-control" />
+            <span asp-validation-for="Password"></span>
         </div>
         <br>
         <div>

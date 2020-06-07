@@ -155,8 +155,8 @@ C:\Users\ksanjiv\Desktop\MiniProj\Exmination\Exmination\bin\Debug\netcoreapp3.1\
 C:\Users\ksanjiv\Desktop\MiniProj\Exmination\Exmination\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Users\ksanjiv\Desktop\MiniProj\Exmination\Exmination\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Users\ksanjiv\Desktop\MiniProj\Exmination\Exmination\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\ksanjiv\Desktop\MiniProj\Exmination\Exmination\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\ksanjiv\Desktop\MiniProj\Exmination\Exmination\obj\Debug\netcoreapp3.1\Razor\Views\Student\PrintAdmitCard.cshtml.g.cs
 C:\Users\ksanjiv\Desktop\MiniProj\Exmination\Exmination\obj\Debug\netcoreapp3.1\Exmination.csproj.CoreCompileInputs.cache
 C:\Users\ksanjiv\Desktop\MiniProj\Exmination\Exmination\obj\Debug\netcoreapp3.1\Exmination.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\ksanjiv\Desktop\MiniProj\Exmination\Exmination\obj\Debug\netcoreapp3.1\Exmination.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\ksanjiv\Desktop\MiniProj\Exmination\Exmination\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
-C:\Users\ksanjiv\Desktop\MiniProj\Exmination\Exmination\obj\Debug\netcoreapp3.1\Razor\Views\Student\PrintAdmitCard.cshtml.g.cs

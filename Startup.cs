@@ -41,8 +41,10 @@ namespace Exmination
             services.AddDbContextPool<ExaminationDBAccess>(entity => entity.UseSqlServer(_configuration.GetConnectionString("ExamDbConnection")));
             services.AddScoped<IRegisterRepositry, RegisterRepositry>();
             services.AddScoped<IEnrollRepositry,EnrollRepositry >();
-            services.AddScoped<IRegisterRepositry, RegisterRepositry>();
             //services.AddControllers();
+            services.AddSession(options => {
+                options.IdleTimeout = TimeSpan.FromMinutes(1);//You can set Time   
+            });
             services.AddControllersWithViews();
         }
 
@@ -65,7 +67,7 @@ namespace Exmination
             app.UseRouting();
 
             app.UseAuthorization();
-
+            app.UseSession();
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(

@@ -8,6 +8,7 @@ using Exmination.Models;
 using Exmination.Models.Account;
 using Exmination.Models.Student;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Exmination.Controllers
@@ -33,7 +34,12 @@ namespace Exmination.Controllers
         {
             
             if (ModelState.IsValid)
-                return RedirectToAction("Dashboard", "StudentDashboard");
+            {
+                HttpContext.Session.SetString("SessionName", "Jarvik");
+                HttpContext.Session.SetInt32("SessionAge", 24);
+                return RedirectToAction( "index", "Home");
+            }
+                //return RedirectToAction("Dashboard", "StudentDashboard");
             return View();
         }
         [HttpGet]
